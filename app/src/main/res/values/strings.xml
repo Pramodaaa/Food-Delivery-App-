@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FoodToGo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="check_out">Check Out</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="food">Food</string>
+    <string name="remove_item">Remove Item</string>
+    <string name="decrease_amount">Decrease Amount</string>
+    <string name="add_amount">Add Amount</string>
+    <string name="amount">Amount</string>
+    <string name="price">Price</string>
+    <string name="datetime">DateTime</string>
+</resources>

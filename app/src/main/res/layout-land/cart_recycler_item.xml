@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/foodImageView"-->
+<!--        android:layout_width="140dp"-->
+<!--        android:layout_height="140dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <ImageView
+        android:id="@+id/foodImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/restaurantNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/restaurant"
+        android:textStyle="bold"
+        android:paddingStart="8dp"
+        app:layout_constraintLeft_toRightOf="@id/foodImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/foodNameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/food"
+        android:paddingStart="8dp"
+        app:layout_constraintLeft_toRightOf="@id/foodImageView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restaurantNameText"
+        tools:ignore="RtlSymmetry" />
+
+
+    <TextView
+        android:id="@+id/amountText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:paddingStart="8dp"
+        app:layout_constraintLeft_toRightOf="@id/foodImageView"
+        app:layout_constraintTop_toBottomOf="@id/foodNameText"
+        app:layout_constraintBottom_toTopOf="@id/dateTimeText"
+        android:visibility="gone"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:gravity="left"
+        android:paddingLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@id/amountText"
+        app:layout_constraintTop_toBottomOf="@id/foodNameText"
+        app:layout_constraintBottom_toTopOf="@id/dateTimeText"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/dateTimeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/datetime"
+        android:paddingStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/amountText"
+        app:layout_constraintLeft_toRightOf="@id/foodImageView"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageButton
+        android:id="@+id/addBtn"
+        android:src="@drawable/ic_add_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/foodImageView"
+        app:layout_constraintTop_toBottomOf="@id/dateTimeText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/add_amount" />
+
+    <TextView
+        android:id="@+id/amountTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/addBtn"
+        app:layout_constraintTop_toBottomOf="@id/dateTimeText" />
+
+    <ImageButton
+        android:id="@+id/removeBtn"
+        android:src="@drawable/ic_remove_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/amountTextNumber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTimeText"
+        android:contentDescription="@string/decrease_amount" />
+
+    <ImageButton
+        android:id="@+id/removeFromCartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/remove_item"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_remove_shopping_cart_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTimeText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
